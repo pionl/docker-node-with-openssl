@@ -1,4 +1,4 @@
-versions=(8 9 10 latest 8-alpine 9-alpine 10-alpine alpine)
+versions=(8 9 10 18 20 22 23 24 latest 8-alpine 9-alpine 10-alpine 18-alpine 20-alpine 22-alpine 23-alpine 24-alpine alpine)
 
 for i in "${versions[@]}"
 do
@@ -14,7 +14,7 @@ do
 	# Build the Docker file from template
 	if [[ $i == *"alpine"* ]]; then
 		templateFile=`cat Dockerfile-alpine.template`
-	else 
+	else
 		templateFile=`cat Dockerfile.template`
 	fi
 
